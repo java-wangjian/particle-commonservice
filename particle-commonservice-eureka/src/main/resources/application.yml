@@ -1,0 +1,27 @@
+# server (eureka 默认端口为：8761)
+server:
+  port: 8761
+
+# spring
+spring:
+  application:
+    name: particle-commonservice-erueka
+  security:
+    user:
+      name: wangjian
+      password: 1234qwer
+
+# eureka
+eureka:
+  client:
+    # 是否注册到eureka
+    register-with-eureka: false
+    # 是否从eureka获取注册信息
+    fetch-registry: false
+    service-url:
+      defaultZone: http://name:password@${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+    hostname: 192.168.252.25
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
