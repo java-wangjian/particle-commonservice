@@ -5,29 +5,25 @@
  * ==============================================================
  */
 
-package com.wangshi.controller;
+package com.wangshi.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by wangjian
  * Date: 18-4-18
- * Time: 上午10:05
+ * Time: 下午4:03
  */
 @RestController
 public class DcController {
 
     @Autowired
-    private DiscoveryClient discoveryClient;
+    private DcClient dcClient;
 
-    @GetMapping(value = "/dc")
-    public String dc(){
-        String services = "Service: " + discoveryClient.getServices();
-        System.out.println(services);
-        return services;
+    @GetMapping(value = "/consumer")
+    public String consumer(){
+        return dcClient.consumer();
     }
 }
