@@ -15,11 +15,13 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.0.RELEASE</version>
+        <version>1.5.4.RELEASE</version>
     </parent>
 
     <modules>
         <module>particle-commonservice-eureka</module>
+        <module>eureka-client</module>
+        <module>eureka-consumer</module>
     </modules>
 
     <properties>
@@ -33,13 +35,11 @@
         <druid.version>1.0.26</druid.version>
         <mybatis-spring.version>1.2.2</mybatis-spring.version>
         <shiro.version>1.2.3</shiro.version>
-        <!--<druid.version>1.0.11</druid.version>-->
         <ehcache.version>2.6.9</ehcache.version>
         <ehcache-web.version>2.0.4</ehcache-web.version>
         <sitemesh.version>2.4.2</sitemesh.version>
         <activiti.version>5.15.1</activiti.version>
         <wink.version>1.4</wink.version>
-        <sso.client.version>3.4.1</sso.client.version> -->
 
 
         <slf4j.version>1.7.7</slf4j.version>
@@ -58,7 +58,7 @@
 
         <spring-boot-admin.version>1.5.1</spring-boot-admin.version>
         <fastjson.version>1.2.35</fastjson.version>
-        <spring-cloud.version>Finchley.M9</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
@@ -155,15 +155,15 @@
         </dependencies>
     </dependencyManagement>
 
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>spring-milestones</id>-->
-            <!--<name>Spring Milestones</name>-->
-            <!--<url>https://repo.spring.io/milestone</url>-->
-            <!--<snapshots>-->
-                <!--<enabled>false</enabled>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>
