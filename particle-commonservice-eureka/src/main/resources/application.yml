@@ -6,10 +6,6 @@ server:
 spring:
   application:
     name: particle-commonservice-erueka
-  security:
-    user:
-      name: wangjian
-      password: 1234qwer
 
 # eureka
 eureka:
@@ -19,9 +15,15 @@ eureka:
     # 是否从eureka获取注册信息
     fetch-registry: false
     service-url:
-      defaultZone: http://name:password@${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:${server.port}/eureka/
   instance:
     hostname: 192.168.252.25
   server:
     enable-self-preservation: false
     eviction-interval-timer-in-ms: 4000
+security:
+  basic:
+    enabled: true
+  user:
+    name: wangjian
+    password: 1234qwer
