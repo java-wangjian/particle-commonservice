@@ -24,6 +24,7 @@
         <module>eureka-consumer</module>
         <module>eureka-consumer-ribbon</module>
         <module>eureka-consumer-feign</module>
+        <module>eureka-feign-upload-client</module>
     </modules>
 
     <properties>
