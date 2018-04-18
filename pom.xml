@@ -22,6 +22,8 @@
         <module>particle-commonservice-eureka</module>
         <module>eureka-client</module>
         <module>eureka-consumer</module>
+        <module>eureka-consumer-ribbon</module>
+        <module>eureka-consumer-feign</module>
     </modules>
 
     <properties>
