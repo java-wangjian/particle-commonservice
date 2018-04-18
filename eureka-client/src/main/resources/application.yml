@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: eureka-client
+security:
+  user:
+    name: wangjian
+    password: 1234qwer
+  basic:
+    enabled: true
+
+server:
+  port: 8082
+eureka:
+  instance:
+    hostname: 192.168.252.25
+  client:
+    # 是否注册到eureka
+    register-with-eureka: true
+    # 是否从eureka获取注册信息
+    fetch-registry: true
+    service-url:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8761/eureka/
+
+
+
