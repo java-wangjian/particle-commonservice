@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://192.168.252.25:8086/
+      profile: dev
+      label: master
+
+server:
+  port: 8087
