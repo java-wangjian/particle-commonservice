@@ -1,3 +1,6 @@
+server:
+  port: 8086
+
 spring:
   application:
     name: config-server-git
@@ -6,10 +9,21 @@ spring:
       server:
         git:
           uri: https://github.com/java-wangjian/hellow_world/
-server:
-  port: 8086
 
 
 # 我们可以通过encrypt.key属性在配置文件中直接指定密钥信息（对称性密钥）
-encrypt:
-  key: wangshi
+#encrypt:
+#  key: wangshi
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8761/eureka/
+  instance:
+    hostname: 192.168.252.25
+security:
+  user:
+    name: wangjian
+    password: 1234qwer
+  basic:
+    enabled: true

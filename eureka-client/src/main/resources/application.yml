@@ -1,3 +1,6 @@
+server:
+  port: 8081
+
 spring:
   application:
     name: eureka-client
@@ -8,8 +11,6 @@ security:
   basic:
     enabled: true
 
-server:
-  port: 8081
 eureka:
   instance:
     hostname: 192.168.252.25
