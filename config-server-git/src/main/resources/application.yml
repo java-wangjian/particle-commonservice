@@ -8,3 +8,8 @@ spring:
           uri: https://github.com/java-wangjian/hellow_world/
 server:
   port: 8086
+
+
+# 我们可以通过encrypt.key属性在配置文件中直接指定密钥信息（对称性密钥）
+encrypt:
+  key: wangshi
