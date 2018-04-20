@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-consumer
+    name: eureka-consumer-feign
 security:
   user:
     name: wangjian
