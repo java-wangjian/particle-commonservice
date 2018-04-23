@@ -1,11 +1,27 @@
+server:
+  port: 8087
+
 spring:
   application:
     name: config-client
   cloud:
     config:
+      discovery:
+        enabled: true
+        service-id: config-server-git
       uri: http://192.168.252.25:8086/
       profile: dev
       label: master
 
-server:
-  port: 8087
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8761/eureka/
+  instance:
+    hostname: 192.168.252.25
+security:
+  user:
+    name: wangjian
+    password: 1234qwer
+  basic:
+    enabled: true
