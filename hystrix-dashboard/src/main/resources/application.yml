@@ -1,6 +1,6 @@
 spring:
   application:
-    name: eureka-consumer-ribbon-hystrix
+    name: hystrix-dashboard
 security:
   user:
     name: wangjian
@@ -9,7 +9,7 @@ security:
     enabled: true
 
 server:
-  port: 8088
+  port: 8089
 eureka:
   instance:
     hostname: 192.168.252.25
