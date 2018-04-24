@@ -21,10 +21,8 @@ import org.springframework.context.annotation.Configuration;
  * Time: 下午5:25
  */
 
-@Configuration
-@EnableAutoConfiguration
 @EnableTurbine
-@EnableDiscoveryClient
+@SpringBootApplication
 public class TurbineApplication {
     public static void main(String[] args) {
         SpringApplication.run(TurbineApplication.class, args);
