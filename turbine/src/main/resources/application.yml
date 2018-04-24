@@ -1,9 +1,8 @@
 server:
-  port: 8083
-
+  port: 8090
 spring:
   application:
-    name: eureka-client
+    name: turbine
 security:
   user:
     name: wangjian
@@ -21,6 +20,15 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8761/eureka/
+logging:
+  file: ${spring.application.name}.log
+management:
+  port: 8091
+turbine:
+  app-config: eureka-consumer-ribbon-hystrix
+  cluster-name-expression: metadata['default']
+  combine-host-port: true
+
 
 
 
