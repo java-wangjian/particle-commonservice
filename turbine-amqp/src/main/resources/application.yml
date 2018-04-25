@@ -1,6 +1,8 @@
+server:
+  port: 8092
 spring:
   application:
-    name: eureka-consumer-ribbon-hystrix
+    name: turbine-amqp
   rabbitmq:
     host: 192.168.254.236
     port: 5672
@@ -13,8 +15,6 @@ security:
   basic:
     enabled: true
 
-server:
-  port: 8088
 eureka:
   instance:
     hostname: 192.168.252.25
@@ -27,7 +27,12 @@ eureka:
       defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8761/eureka/
 logging:
   file: ${spring.application.name}.log
-
-
+management:
+  port: 8091
+# turbine（说明：注意必须为大写，因为 eureka 返回的值都是大写的）
+turbine:
+  app-config: EUREKA-CONSUMER-RIBBON-HYSTRIX
+  cluster-name-expression: new String("default")
+  combine-host-port: true
 
 

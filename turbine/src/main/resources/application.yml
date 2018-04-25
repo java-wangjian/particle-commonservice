@@ -29,5 +29,3 @@ turbine:
   app-config: EUREKA-CONSUMER-RIBBON-HYSTRIX
   cluster-name-expression: new String("default")
   combine-host-port: true
-
-

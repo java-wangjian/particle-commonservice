@@ -16,38 +16,21 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>eureka-consumer-ribbon-hystrix</artifactId>
+    <artifactId>turbine-amqp</artifactId>
     <packaging>jar</packaging>
-    <name>eureka-consumer-ribbon-hystrix</name>
-    <description>Hystrix具备了服务降级、服务熔断、线程隔离、请求缓存、请求合并以及服务监控等强大功能</description>
+    <name>turbine-amqp</name>
+    <description>Spring Cloud在封装Turbine的时候，还实现了基于消息代理的收集实现。 所以，我们可以将所有需要收集的监控信息都输出到消息代理中， 然后Turbine服务再从消息代理中异步的获取这些监控信息， 最后将这些监控信息聚合并输出到Hystrix Dashboard中。</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-ribbon</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <artifactId>spring-cloud-starter-turbine-amqp</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-hystrix-amqp</artifactId>
-        </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -56,5 +39,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>

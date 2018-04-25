@@ -1,6 +1,9 @@
+server:
+  port: 8093
+
 spring:
   application:
-    name: eureka-consumer
+    name: zuul-api-gateway
 security:
   user:
     name: wangjian
@@ -8,8 +11,6 @@ security:
   basic:
     enabled: true
 
-server:
-  port: 8081
 eureka:
   instance:
     hostname: 192.168.252.25

@@ -31,6 +31,9 @@
         <module>eureka-consumer-ribbon-hystrix</module>
         <module>hystrix-dashboard</module>
         <module>turbine</module>
+        <module>turbine-amqp</module>
+        <module>zuul-api-gateway</module>
+        <module>stream-hello</module>
     </modules>
 
     <properties>
@@ -67,7 +70,7 @@
 
         <spring-boot-admin.version>1.5.1</spring-boot-admin.version>
         <fastjson.version>1.2.35</fastjson.version>
-        <spring-cloud.version>Dalston.SR1</spring-cloud.version>
+        <spring-cloud.version>Dalston.SR5</spring-cloud.version>
     </properties>
 
     <dependencyManagement>
