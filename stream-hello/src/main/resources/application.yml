@@ -1,8 +1,8 @@
 server:
-  port: 8092
+  port: 8093
 spring:
   application:
-    name: turbine-amqp
+    name: stream-hello
 # 此处为链接rabbitMQ的url port name password
 # 改用自己部署的rabbitMQ帐号以及密码
   rabbitmq:
@@ -29,12 +29,5 @@ eureka:
       defaultZone: http://${security.user.name}:${security.user.password}@${eureka.instance.hostname}:8761/eureka/
 logging:
   file: ${spring.application.name}.log
-management:
-  port: 8091
-# turbine（说明：注意必须为大写，因为 eureka 返回的值都是大写的）
-turbine:
-  app-config: EUREKA-CONSUMER-RIBBON-HYSTRIX
-  cluster-name-expression: new String("default")
-  combine-host-port: true
 
 
